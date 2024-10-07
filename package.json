@@ -1,0 +1,43 @@
+{
+  "name": "@joaomelo/objects",
+  "description": "utilities for objects",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "quality": "npm run lint && npm run test",
+    "test": "vitest run",
+    "lint": "eslint --fix",
+    "build": "vite build",
+    "deploy": "release-it --ci --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaomelo/objects.git"
+  },
+  "author": "joão melo <j@melo.plus> (https://joao.melo.plus)",
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@stylistic/eslint-plugin": "^2.8.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/lodash.clonedeep": "^4.5.9",
+    "@types/node": "^22.5.0",
+    "eslint": "^9.9.1",
+    "eslint-plugin-no-only-tests": "^3.3.0",
+    "eslint-plugin-perfectionist": "^3.3.0",
+    "globals": "^15.9.0",
+    "release-it": "^17.0.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.0.11",
+    "vite-plugin-checker": "^0.7.2",
+    "vitest": "^0.31.4"
+  },
+  "keywords": ["objects", "utils", "javascript", "typescript"],
+  "license": "MIT"
+}
