@@ -2,15 +2,25 @@
   "name": "@joaomelo/objects",
   "description": "utilities for objects",
   "version": "0.0.1",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "require": null,
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
     "quality": "npm run lint && npm run test",
     "test": "vitest run",
-    "lint": "eslint --fix",
+    "lint": "eslint",
     "build": "vite build",
     "deploy": "release-it --ci --verbose"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -36,8 +46,14 @@
     "typescript-eslint": "^8.3.0",
     "vite": "^5.0.11",
     "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-dts": "^4.2.3",
     "vitest": "^0.31.4"
   },
-  "keywords": ["objects", "utils", "javascript", "typescript"],
+  "keywords": [
+    "objects",
+    "utils",
+    "javascript",
+    "typescript"
+  ],
   "license": "MIT"
 }
