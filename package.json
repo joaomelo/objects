@@ -17,7 +17,8 @@
     "test": "vitest run",
     "lint": "eslint",
     "build": "vite build",
-    "deploy": "release-it --ci --verbose"
+    "deploy": "release-it --ci --verbose",
+    "docs": "node ./readme.js"
   },
   "publishConfig": {
     "access": "public"
@@ -41,6 +42,7 @@
     "eslint-plugin-no-only-tests": "^3.3.0",
     "eslint-plugin-perfectionist": "^3.3.0",
     "globals": "^15.9.0",
+    "readme-md-generator": "^1.0.0",
     "release-it": "^17.0.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0",
