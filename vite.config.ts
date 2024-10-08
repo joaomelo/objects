@@ -12,13 +12,16 @@ export default defineConfig(() => {
       lib: {
         entry: pathTo("./src/index.ts"),
         fileName: "index",
-        formats: ["es"] as LibraryFormats[]
+        formats: ["es"] as LibraryFormats[],        
       },
       outDir: "dist",
       sourcemap: true,
     },
     plugins: [
-      dts({ rollupTypes: true }),
+      dts({ 
+        rollupTypes: true,
+        tsconfigPath: "./tsconfig.app.json"
+      }),
       checker({ typescript: true })
     ],
     resolve: {

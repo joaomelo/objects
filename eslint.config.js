@@ -47,6 +47,8 @@ export default tseslint.config(
           exceptAfterSingleLine: true
         },
       ],
+      "@stylistic/multiline-ternary": ["error", "always-multiline"],
+      "@stylistic/no-multi-spaces": "error",
       "@stylistic/object-curly-newline": [
         "error",
         {
@@ -58,8 +60,9 @@ export default tseslint.config(
       ],
       "@stylistic/object-curly-spacing": ["error", "always"],
       "@stylistic/object-property-newline": ["error", { allowAllPropertiesOnSameLine: true }],
+      "@stylistic/operator-linebreak": ["error", "before"],
       "@stylistic/quotes": ["error", "double"],
-      "@stylistic/semi": ["error", "always"],
+      "@stylistic/semi": ["error", "always"]
     }
   },  
   perfectionist.configs["recommended-natural"],
