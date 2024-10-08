@@ -6,7 +6,7 @@ import { resolve } from "path";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  { ignores: ["dist", "readme.js"] },
 
   // javascript
   js.configs.recommended,

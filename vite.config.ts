@@ -19,16 +19,7 @@ export default defineConfig(() => {
     },
     plugins: [
       dts({ rollupTypes: true }),
-      checker({
-        eslint: {
-          lintCommand: "eslint",
-          useFlatConfig: true
-        },
-        overlay: {
-          initialIsOpen: false
-        },
-        typescript: true,
-      })
+      checker({ typescript: true })
     ],
     resolve: {
       alias: {
@@ -37,7 +28,6 @@ export default defineConfig(() => {
     },
     test: {
       environment: "node",
-      include: ["../**/*.test.js"]
     },
   };
 });

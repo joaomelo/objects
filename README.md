@@ -1,5 +1,3 @@
-@joaomelo/objects
-
 utilities for objects
 
 ```bash
