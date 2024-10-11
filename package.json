@@ -13,12 +13,11 @@
     }
   },
   "scripts": {
-    "quality": "npm run lint && npm run test",
-    "test": "vitest run",
     "lint": "eslint",
+    "test": "vitest run",
     "build": "vite build",
-    "deploy": "release-it --ci --verbose",
-    "docs": "node ./readme.js"
+    "readme": "readme",
+    "deploy": "npm run lint && npm run test && release-it --ci --verbose"
   },
   "publishConfig": {
     "access": "public"
@@ -33,6 +32,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
+    "@joaomelo/readme": "^0.1.1",
     "@release-it/conventional-changelog": "^8.0.1",
     "@stylistic/eslint-plugin": "^2.8.0",
     "@types/eslint__js": "^8.42.3",
@@ -42,7 +42,6 @@
     "eslint-plugin-no-only-tests": "^3.3.0",
     "eslint-plugin-perfectionist": "^3.3.0",
     "globals": "^15.9.0",
-    "readme-md-generator": "^1.0.0",
     "release-it": "^17.0.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0",
