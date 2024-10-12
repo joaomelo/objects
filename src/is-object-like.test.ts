@@ -5,7 +5,8 @@ import { isObjectLike } from "./is-object-like";
 describe("isObjectLike", () => {
   it.each([
     [{}],
-    [{ key: "value" }]
+    [{ key: "value" }],
+    [[]]
   ])("should return true for object-like values: %s", (value) => {
     expect(isObjectLike(value)).toBe(true);
   });
@@ -17,8 +18,7 @@ describe("isObjectLike", () => {
     true,
     false,
     () => undefined,
-    undefined,
-    [[]]
+    undefined
   ])("should return false for non-object-like values: %s", (value) => {
     expect(isObjectLike(value)).toBe(false);
   });

@@ -1,5 +1,3 @@
 export function isObjectLike(maybeObject: unknown): maybeObject is object {
-  return typeof maybeObject === "object" 
-    && maybeObject !== null 
-    && !Array.isArray(maybeObject);
+  return typeof maybeObject === "object" && maybeObject !== null; 
 }
